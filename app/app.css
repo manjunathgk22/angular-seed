@@ -1,19 +1,42 @@
 .container{
   display:flex;
   width:80%;
+  height: 80vh;
   margin:0 auto;
   padding-top:5%;
 }
 .leftItems{
+	overflow: auto;
 	min-width: 20%;
-  border-right: 0.5px solid grey;
+  border-right: inset 0 0 6px rgba(0,0,0,0.3);
   padding:10px 5px;
   width:auto;
 }
+
 .selecteditems{
+	padding-left: 20px;
   width:auto;
 }
 .view{
 	    display: flex;
     width: 100%
+}
+.leftItems::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+.leftItems::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+.leftItems::-webkit-scrollbar-thumb
+{
+	background-color: #eff9f7;
+}
+.card{
+	text-align: center;
 }
