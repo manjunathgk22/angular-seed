@@ -1,1 +1,9 @@
-<p>This is the partial for view 1.</p>
+<div class="leftItems">
+    <input ng-model="selecteditem" type="text" class="form-control" placeholder="Enter company name">
+    <div class="leftnavItems" ng-repeat="item in records">
+        <p ng-click="addItem(item)">
+            <img src="{{item.avatar}}" alt="{{item.name}}">
+            <span>{{item.name}}</span>
+        </p>
+    </div>
+</div>
