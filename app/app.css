@@ -5,10 +5,15 @@
   padding-top:5%;
 }
 .leftItems{
+	min-width: 20%;
   border-right: 0.5px solid grey;
   padding:10px 5px;
   width:auto;
-  overflow: auto;
-  max-height: 50vh;
 }
-	
+.selecteditems{
+  width:auto;
+}
+.view{
+	    display: flex;
+    width: 100%
+}

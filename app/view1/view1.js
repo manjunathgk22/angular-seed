@@ -10,5 +10,20 @@ angular.module('myApp.view1', ['ngRoute'])
 }])
 
 .controller('View1Ctrl', ['$scope',function($scope) {
-	$scope.records = DataDump || 'qqqqqqqqqqqqqqqqqqq';
+	$scope.records = DataDump;
+	$scope.selectedItems = [];
+
+	$scope.addItem = function(addItem){
+   
+    if(!$scope.selectedItems.includes(addItem)){
+      $scope.selectedItems.push(addItem)
+    }
+}
+  $scope.delitem = function(delItem){
+    $scope.selectedItems = $scope.selectedItems.filter(function(item) {
+    return item.id !== delItem.id ;
+	});    
+  }
+  
+
 }]);

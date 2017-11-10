@@ -1,9 +1,17 @@
 <div class="leftItems">
-    <input ng-model="selecteditem" type="text" class="form-control" placeholder="Enter company name">
-    <div class="leftnavItems" ng-repeat="item in records">
-        <p ng-click="addItem(item)">
-            <img src="{{item.avatar}}" alt="{{item.name}}">
-            <span>{{item.name}}</span>
-        </p>
+		 <input ng-model="selecteditem" type="text" class="form-control" placeholder="Enter company name">
+<div ng-repeat="item in records |filter : selecteditem" >
+  <p ng-click="addItem(item)">
+  <img src="{{item.avatar}}" alt="{{item.name}}">
+  <span>{{item.name}}</span>
+    </p>
     </div>
-</div>
+  </div>
+  <div class="selecteditems">
+    <div class="col-sm-4" ng-repeat = "selItem in selectedItems" >
+      <p ng-click="delitem(selItem)">
+  <img src="{{selItem.avatar}}" alt="{{selItem.name}}">
+  <span>{{selItem.name}}</span>
+    </p>
+    </div>
+  </div>
