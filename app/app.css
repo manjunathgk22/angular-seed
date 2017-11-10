@@ -15,7 +15,23 @@
 
 .selecteditems{
 	padding-left: 20px;
-  width:auto;
+  width:80%;
+  overflow: auto;
+}
+.leftNavItem{
+opacity: 0.8;
+}
+.addItem:hover{
+	background: #98ec9b;
+	cursor: pointer;
+	color: #ffffff;
+	font-weight: bold;
+}
+.delItem:hover{
+	background: #d8737f;
+	cursor: pointer;
+	color: #ffffff;
+	font-weight: bold;
 }
 .view{
 	    display: flex;
